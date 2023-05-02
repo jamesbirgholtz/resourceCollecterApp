@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "AG8O+ZKJ+on6nHC8gu9nIOXy1tfTYcHK66zpm5O6VJWNCmgVBwL6vs4tJi4nDeDPSZmwMB+ZBMXWJ2PflMb4KA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\birgh\\Desktop\\P\\gameProject\\resourceCollectorApp\\resourceCollectorApp\\resourceCollectorApp\\resourceCollectorApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\birgh\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.1.0\\com.airbnb.xamarin.forms.lottie.4.1.0.nupkg.sha512",
+    "C:\\Users\\birgh\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\birgh\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\birgh\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\birgh\\.nuget\\packages\\xamarin.essentials\\1.7.5\\xamarin.essentials.1.7.5.nupkg.sha512",
+    "C:\\Users\\birgh\\.nuget\\packages\\xamarin.forms\\5.0.0.2578\\xamarin.forms.5.0.0.2578.nupkg.sha512"
+  ],
+  "logs": []
+}

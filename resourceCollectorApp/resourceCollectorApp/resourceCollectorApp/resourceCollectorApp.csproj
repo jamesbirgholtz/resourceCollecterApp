@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="buttonImg.png" />
+    <None Remove="Resources\R1_W1.png" />
+    <None Remove="Resources\R2_W1.png" />
+    <None Remove="Resources\R3_W1.png" />
+    <None Remove="Resources\R4_W1.jpeg" />
+    <None Remove="Resources\R4_W1.png" />
+    <None Remove="Resources\row-1-column-1.jpg" />
+    <None Remove="Resources\row-2-column-1.jpg" />
+    <None Remove="Resources\row-3-column-1.jpg" />
+    <None Remove="Resources\row-4-column-1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="buttonImg.png" />
+    <EmbeddedResource Include="Resources\R1_W1.png" />
+    <EmbeddedResource Include="Resources\R2_W1.png" />
+    <EmbeddedResource Include="Resources\R3_W1.png" />
+    <EmbeddedResource Include="Resources\R4_W1.png" />
+    <EmbeddedResource Include="Resources\row-1-column-1.jpg" />
+    <EmbeddedResource Include="Resources\row-2-column-1.jpg" />
+    <EmbeddedResource Include="Resources\row-3-column-1.jpg" />
+    <EmbeddedResource Include="Resources\row-4-column-1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="TabbedPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BuildRocketPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ToolPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\UpgradeToolsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\UpgradeTreePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

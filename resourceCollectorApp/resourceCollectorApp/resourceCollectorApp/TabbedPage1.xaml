@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Views="clr-namespace:resourceCollectorApp"
+            x:Class="resourceCollectorApp.TabbedPage1" AnchorY="10" NavigationPage.HasNavigationBar="False"
+            
+           >
+
+    <Views:UpgradeToolsPage Title="Tool upgrades" />
+    <Views:ToolPage Title="Tools" />
+    <Views:MainPage Title="Main Page" />
+    <Views:BuildRocketPage Title="Build Rocket" />
+    <Views:UpgradeTreePage Title="Evolution"  />
+
+</TabbedPage>

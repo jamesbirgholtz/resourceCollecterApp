@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="resourceCollectorApp.ToolPage"
+             BackgroundImageSource="row-2-column-1.jpg"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Margin="20,50,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid RowSpacing="0" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image x:Name="Resource1Image" Grid.Row="0" Grid.Column="0" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0"/>
+                <Label x:Name="Resource1CountLabel" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                <Image x:Name="Resource2Image" Grid.Row="0" Grid.Column="1" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                <Label x:Name="Resource2CountLabel" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                <Image x:Name="Resource3Image" Grid.Row="2" Grid.Column="0" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                <Label x:Name="Resource3CountLabel" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                <Image x:Name="Resource4Image" Grid.Row="2" Grid.Column="1" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0"  />
+                <Label x:Name="Resource4CountLabel" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1"  />
+            </Grid>
+            <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalScrollBarVisibility="Always" VerticalOptions="FillAndExpand">
+                <StackLayout Grid.Row ="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="350" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid x:Name="R1PerClickUpgradeButton" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R1PerClickUpgrade" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R1PerClickUpgradeLabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource1Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R2PerClickUpgradeButton" Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R2PerClickUpgrade" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R2PerClickUpgradeLabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource2Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R3PerClickUpgradeButton" Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R3PerClickUpgrade" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R3PerClickUpgradeLabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource3Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R4PerClickUpgradeButton" Grid.Row="3" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R4PerClickUpgrade" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R4PerClickUpgradeLabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource4Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+
+                        <Grid x:Name="R1PerSecondTool1Button" Grid.Row="4" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R1PerSecondTool1" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R1PerSecondTool1LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource1Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R2PerSecondTool1Button" Grid.Row="5"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R2PerSecondTool1" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R2PerSecondTool1LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource2Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R3PerSecondTool1Button" Grid.Row="6" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R3PerSecondTool1" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R3PerSecondTool1LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource3Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R4PerSecondTool1Button" Grid.Row="7" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R4PerSecondTool1" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R4PerSecondTool1LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource4Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+
+                        <Grid x:Name="R1PerSecondTool2Button" Grid.Row="8" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R1PerSecondTool2" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R1PerSecondTool2LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource1Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R2PerSecondTool2Button" Grid.Row="9"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R2PerSecondTool2" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R2PerSecondTool2LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource2Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R3PerSecondTool2Button" Grid.Row="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R3PerSecondTool2" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R3PerSecondTool2LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource3Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R4PerSecondTool2Button" Grid.Row="11"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R4PerSecondTool2" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R4PerSecondTool2LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource4Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+
+                        <Grid x:Name="R1PerSecondTool3Button" Grid.Row="12" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R1PerSecondTool3" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R1PerSecondTool3LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource1Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R2PerSecondTool3Button" Grid.Row="13" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R2PerSecondTool3" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R2PerSecondTool3LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource2Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R3PerSecondTool3Button" Grid.Row="14"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R3PerSecondTool3" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R3PerSecondTool3LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource3Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                        <Grid x:Name="R4PerSecondTool3Button" Grid.Row="15" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="R4PerSecondTool3" NumberOfTapsRequired="1" />
+                            </Grid.GestureRecognizers>
+                            <Label x:Name="R4PerSecondTool3LabelText" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <Image Source="{Binding Source={x:Reference Resource4Image}, Path=Source}" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+                        </Grid>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </Grid>
+</ContentPage>
+

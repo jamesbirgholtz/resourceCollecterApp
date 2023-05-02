@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="resourceCollectorApp.BuildRocketPage"
+             BackgroundImageSource="row-4-column-1.jpg"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <StackLayout  Margin="20,50,20,20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Grid RowSpacing="0" ColumnSpacing="0" VerticalOptions="End">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="Resource1Image" Grid.Row="0" Grid.Column="0" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0"/>
+            <Label x:Name="Resource1CountLabel" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <Image x:Name="Resource2Image" Grid.Row="0" Grid.Column="1" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+            <Label x:Name="Resource2CountLabel" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <Image x:Name="Resource3Image" Grid.Row="2" Grid.Column="0" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0" />
+            <Label x:Name="Resource3CountLabel" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <Image x:Name="Resource4Image" Grid.Row="2" Grid.Column="1" VerticalOptions="Fill" HorizontalOptions="Start" AnchorX="0"  />
+            <Label x:Name="Resource4CountLabel" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+            <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1"  />
+        </Grid>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,50,0,0">
+            <Label x:Name="R1ToRocketLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Button x:Name ="R1ToRocketButton" Clicked ="R1ToRocket" Text="R1 to rocket" />
+            <Label x:Name="R2ToRocketLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Button x:Name ="R2ToRocketButton" Clicked ="R2ToRocket" Text="R2 to rocket" />
+            <Label x:Name="R3ToRocketLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Button x:Name ="R3ToRocketButton" Clicked ="R3ToRocket" Text="R3 to rocket" />
+            <Label x:Name="R4ToRocketLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Button x:Name ="R4ToRocketButton" Clicked ="R4ToRocket" Text="R4 to rocket" />
+            <Button x:Name ="LaunchButton" Clicked ="LaunchButtonClicked" Text="Launch!" IsVisible="False" IsEnabled="False" />
+        </StackLayout>
+        <ProgressBar x:Name="rocketProgressBar" HorizontalOptions="FillAndExpand" Progress="0" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</ContentPage>
